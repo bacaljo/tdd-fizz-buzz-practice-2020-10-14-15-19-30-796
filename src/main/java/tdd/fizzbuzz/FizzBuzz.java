@@ -4,6 +4,7 @@ public class FizzBuzz {
 
     private final String FIZZ = "Fizz";
     private final String BUZZ = "Buzz";
+    private final String WHIZZ = "Whizz";
 
     public String countOff(int number) {
         if (number == 1)
@@ -12,8 +13,8 @@ public class FizzBuzz {
             return FIZZ;
         } else if (isMultipleOfNumber(number, 5)) {
             return BUZZ;
-        } else if (number == 7) {
-            return "Whizz";
+        } else if (isMultipleOfNumber(number, 7)) {
+            return WHIZZ;
         }
 
         return null;
