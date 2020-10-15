@@ -7,6 +7,8 @@ public class FizzBuzz {
             return "1";
         else if (number == 3) {
             return "Fizz";
+        } else if (number == 5) {
+            return "Buzz";
         }
 
         return null;
