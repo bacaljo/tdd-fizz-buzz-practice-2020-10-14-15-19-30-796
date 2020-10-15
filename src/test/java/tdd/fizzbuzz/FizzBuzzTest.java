@@ -11,6 +11,7 @@ public class FizzBuzzTest {
     public final String WHIZZ = "Whizz";
     public final String FIZZBUZZ = "FizzBuzz";
     public final String FIZZWHIZZ = "FizzWhizz";
+    public final String BUZZWHIZZ = "BuzzWhizz";
 
     @BeforeEach
     void setUp() {
@@ -102,5 +103,20 @@ public class FizzBuzzTest {
         // then
         assert (FIZZWHIZZ).equals(firstResult);
         assert (FIZZWHIZZ).equals(secondResult);
+    }
+
+    @Test
+    void should_return_BuzzWhizz_when_count_off_given_multiples_of_5_and_7_but_not_a_multiple_of_3() {
+        // given
+        int firstOrderNumber = 35;
+        int secondOrderNumber = 70;
+
+        // when
+        String firstResult = fizzBuzz.countOff(firstOrderNumber);
+        String secondResult = fizzBuzz.countOff(secondOrderNumber);
+
+        // then
+        assert (BUZZWHIZZ).equals(firstResult);
+        assert (BUZZWHIZZ).equals(secondResult);
     }
 }
