@@ -6,6 +6,7 @@ public class FizzBuzz {
     private final String BUZZ = "Buzz";
     private final String WHIZZ = "Whizz";
     private final String FIZZBUZZ = "FizzBuzz";
+    private final String FIZZWHIZZ = "FizzWhizz";
 
     public String countOff(int number) {
         boolean isAMultipleOf3 = isMultipleOfNumber(number, 3);
@@ -16,6 +17,8 @@ public class FizzBuzz {
             return "1";
         else if (isAMultipleOf3 && isAMultipleOf5 && !isAMultipleOf7) {
             return FIZZBUZZ;
+        } else if (isAMultipleOf3 && !isAMultipleOf5 && isAMultipleOf7) {
+            return FIZZWHIZZ;
         } else if (isAMultipleOf3) {
             return FIZZ;
         } else if (isAMultipleOf5) {
