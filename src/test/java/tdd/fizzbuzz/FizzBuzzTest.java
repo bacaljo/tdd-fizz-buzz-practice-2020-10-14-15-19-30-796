@@ -47,4 +47,16 @@ public class FizzBuzzTest {
         // then
         assert("Buzz").equals(actual);
     }
+
+    @Test
+    void should_return_Whizz_when_count_off_given_7() {
+        // given
+        int orderNumber = 7;
+
+        // when
+        String actual = fizzBuzz.countOff(orderNumber);
+
+        // then
+        assert("Whizz").equals(actual);
+    }
 }
