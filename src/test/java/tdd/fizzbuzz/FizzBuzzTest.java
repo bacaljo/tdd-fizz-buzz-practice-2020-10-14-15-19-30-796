@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 public class FizzBuzzTest {
 
     public FizzBuzz fizzBuzz;
+    public final String FIZZ = "Fizz";
 
     @BeforeEach
     void setUp() {
@@ -35,8 +36,8 @@ public class FizzBuzzTest {
         String secondResult = fizzBuzz.countOff(secondOrderNumber);
 
         // then
-        assert("Fizz").equals(firstResult);
-        assert("Fizz").equals(secondResult);
+        assert(FIZZ).equals(firstResult);
+        assert(FIZZ).equals(secondResult);
     }
 
     @Test
