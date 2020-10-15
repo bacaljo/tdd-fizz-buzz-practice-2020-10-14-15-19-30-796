@@ -15,9 +15,7 @@ public class FizzBuzz {
         boolean isAMultipleOf5 = isMultipleOfNumber(number, 5);
         boolean isAMultipleOf7 = isMultipleOfNumber(number, 7);
 
-        if (number == 1)
-            return "1";
-        else if (isAMultipleOf3 && isAMultipleOf5 && isAMultipleOf7) {
+        if (isAMultipleOf3 && isAMultipleOf5 && isAMultipleOf7) {
             return FIZZBUZZWHIZZ;
         } else if (isAMultipleOf3 && isAMultipleOf5 && !isAMultipleOf7) {
             return FIZZBUZZ;
@@ -31,9 +29,9 @@ public class FizzBuzz {
             return BUZZ;
         } else if (isAMultipleOf7) {
             return WHIZZ;
+        } else {
+            return Integer.toString(number);
         }
-
-        return null;
     }
 
     private boolean isMultipleOfNumber(int number, int modulus) {
