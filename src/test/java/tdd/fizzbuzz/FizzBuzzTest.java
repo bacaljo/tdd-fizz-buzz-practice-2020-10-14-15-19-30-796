@@ -9,10 +9,10 @@ public class FizzBuzzTest {
     public final String FIZZ = "Fizz";
     public final String BUZZ = "Buzz";
     public final String WHIZZ = "Whizz";
-    public final String FIZZBUZZ = "FizzBuzz";
-    public final String FIZZWHIZZ = "FizzWhizz";
-    public final String BUZZWHIZZ = "BuzzWhizz";
-    public final String FIZZBUZZWHIZZ = "FizzBuzzWhizz";
+    public final String FIZZBUZZ = FIZZ + BUZZ;
+    public final String FIZZWHIZZ = FIZZ + WHIZZ;
+    public final String BUZZWHIZZ = BUZZ + WHIZZ;
+    public final String FIZZBUZZWHIZZ = FIZZ + BUZZ + WHIZZ;
 
     @BeforeEach
     void setUp() {
