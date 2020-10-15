@@ -2,11 +2,13 @@ package tdd.fizzbuzz;
 
 public class FizzBuzz {
 
+    private final String FIZZ = "Fizz";
+
     public String countOff(int number) {
         if (number == 1)
             return "1";
         else if (isMultipleOfNumber(number, 3)) {
-            return "Fizz";
+            return FIZZ;
         } else if (number == 5) {
             return "Buzz";
         } else if (number == 7) {
