@@ -12,6 +12,7 @@ public class FizzBuzzTest {
     public final String FIZZBUZZ = "FizzBuzz";
     public final String FIZZWHIZZ = "FizzWhizz";
     public final String BUZZWHIZZ = "BuzzWhizz";
+    public final String FIZZBUZZWHIZZ = "FizzBuzzWhizz";
 
     @BeforeEach
     void setUp() {
@@ -118,5 +119,20 @@ public class FizzBuzzTest {
         // then
         assert (BUZZWHIZZ).equals(firstResult);
         assert (BUZZWHIZZ).equals(secondResult);
+    }
+
+    @Test
+    void should_return_FizzBuzzWhizz_when_count_off_given_multiples_of_3_5_and_7() {
+        // given
+        int firstOrderNumber = 105;
+        int secondOrderNumber = 210;
+
+        // when
+        String firstResult = fizzBuzz.countOff(firstOrderNumber);
+        String secondResult = fizzBuzz.countOff(secondOrderNumber);
+
+        // then
+        assert (FIZZBUZZWHIZZ).equals(firstResult);
+        assert (FIZZBUZZWHIZZ).equals(secondResult);
     }
 }
