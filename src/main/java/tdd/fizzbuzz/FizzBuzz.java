@@ -1,23 +1,27 @@
 package tdd.fizzbuzz;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class FizzBuzz {
 
-    private final String FIZZ = "Fizz";
-    private final String BUZZ = "Buzz";
-    private final String WHIZZ = "Whizz";
+    private final Map<Integer, String> modulusMagicWordMap;
+
+    public FizzBuzz() {
+        modulusMagicWordMap = new LinkedHashMap<>();
+        modulusMagicWordMap.put(3, "Fizz");
+        modulusMagicWordMap.put(5, "Buzz");
+        modulusMagicWordMap.put(7, "Whizz");
+    }
 
     public String countOff(int number) {
         StringBuilder stringBuilder = new StringBuilder();
 
-        if (isMultipleOfNumber(number, 3)) {
-            stringBuilder.append(FIZZ);
-        }
-        if (isMultipleOfNumber(number, 5)) {
-            stringBuilder.append(BUZZ);
-        }
-        if (isMultipleOfNumber(number, 7)) {
-            stringBuilder.append(WHIZZ);
-        }
+        modulusMagicWordMap.forEach((modulus, magicWord) -> {
+            if (isMultipleOfNumber(number, modulus)) {
+                stringBuilder.append(magicWord);
+            }
+        });
 
         return stringBuilder.toString().isEmpty()
                 ? Integer.toString(number)
