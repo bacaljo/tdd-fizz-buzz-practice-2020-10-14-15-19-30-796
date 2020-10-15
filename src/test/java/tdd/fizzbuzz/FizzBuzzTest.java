@@ -25,15 +25,18 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_Fizz_when_count_off_given_3() {
+    void should_return_Fizz_when_count_off_given_multiples_of_3_but_not_a_multiple_of_5_or_7() {
         // given
-        int orderNumber = 3;
+        int firstOrderNumber = 3;
+        int secondOrderNumber = 6;
 
         // when
-        String actual = fizzBuzz.countOff(orderNumber);
+        String firstResult = fizzBuzz.countOff(firstOrderNumber);
+        String secondResult = fizzBuzz.countOff(secondOrderNumber);
 
         // then
-        assert("Fizz").equals(actual);
+        assert("Fizz").equals(firstResult);
+        assert("Fizz").equals(secondResult);
     }
 
     @Test
